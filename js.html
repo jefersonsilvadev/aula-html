@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Java Script</title>
+
+        <script>
+            // JavaScript não é JAVA
+
+            var nome = "Jeferson"; //string (tipo texto)
+            var idade = 22; //int (número inteiro)
+            var peso = 22.9; //float (números com virgulas)
+            var andando = false; //bool
+
+            
+            function exibir()
+            {
+                var pessoa = prompt("Qual é seu nome?");
+                console.log("Ola " + pessoa);
+            }
+
+            function maiuscula()
+            {
+                var pessoa = prompt("Qual é seu nome?");
+                var novo = pessoa.toUpperCase();
+                console.log(novo);
+            }
+
+            function email()
+            {
+                var pessoa = prompt("Qual é seu email?");
+                var dados = pessoa.split("@")
+
+                var usuario = dados[0];
+                var servidor = dados[1];
+                
+                console.log("usuário: "+ usuario);
+                console.log("servidor: "+ servidor);
+                
+            }
+
+            function somar()
+            {
+                var n1 = prompt("digite o num 1:");
+                var n2 = prompt("digite o num 2:");
+
+                var resultado = parseInt(n1) + parseInt(n2);
+
+                console.log(resultado);
+            }
+
+            function sub()
+            {
+                var n1 = prompt("digite o num 1:");
+                var n2 = prompt("digite o num 2:");
+                console.log(n1-n2);
+            }
+            
+            function div()
+            {
+                var n1 = prompt("digite o num 1:");
+                var n2 = prompt("digite o num 2:");
+                console.log(n1/n2);
+            }
+
+            function mult()
+            {
+                var n1 = prompt("digite o num 1:");
+                var n2 = prompt("digite o num 2:");
+                console.log(n1*n2);
+            }
+
+        </script>
+    </head>
+
+    <body>
+
+        <h1>Aula de JavaScript</h1>
+
+        <button onclick="exibir()">Exibir alert</button>
+
+        <button onclick="maiuscula()">Exibir maiusculo</button>
+
+        <button onclick="email()">Email</button>
+
+        <button onclick="somar()">somar</button>
+        <button onclick="sub()">sub</button>
+        <button onclick="div()">div</button>
+        <button onclick="mult()">mult</button>
+
+    </body>
+
+</html>
