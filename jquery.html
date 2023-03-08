@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+
+    <script src="jquery-3.6.3.js"></script>
+
+    <style>
+        div
+        {
+            background-color: blanchedalmond;
+            border: 1px solid black;
+            padding: 4px;
+            margin: 4px;
+            display: inline;
+        }
+    </style>
+
+    <script>
+
+        function esconder()
+        {
+            var titulo = $("#titulo");
+            console.log("click");
+
+            titulo.fadeOut();
+
+        }
+
+        function cor()
+        {
+            var cor = $("#cor").val()
+            console.log(cor);
+
+            $("div").css("background-color", cor)
+            
+        }
+
+
+    </script>
+
+    <style>
+        #titulo {
+            color: red;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <h1 id="titulo">JQuery</h1>
+
+    <div onclick="esconder()">Click</div>
+    <div onclick="cor()">Click</div>
+    <div>Click</div>
+    <div>Click</div>
+
+    <input id="cor" type="color" />
+
+</body>
+</html>
