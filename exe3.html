@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="jquery-3.6.3.js"></script>
+
+    <script>
+
+        //executa quando o DOM foi carregado
+        $(document).ready(function()
+        {
+            $("h1").css("color","red")
+        });
+
+        //forma resumida
+        $(function()
+        {
+            $("h1").click(function()
+            {
+                $("h1").css("color","green")
+            });
+
+            $("div").mousemove(function()
+            {
+                $(this).css("background","white")
+            });
+
+            $("div").mouseout(function()
+            {
+                $(this).css("background", "coral")
+                
+            });
+
+            //cadastrar cidade
+            $("#btn-cadastrar").click(function()
+            {
+                var cidades = $("#cidades").val();
+                console.log(cidades);
+                $("#todas-cidades").append("<li>"+cidades+"</li>");
+            });
+
+            //deletar cidade
+            $(".delete").click(function()
+            {
+                console.log($(this).parent());
+                $(this).parent().remove();
+            });
+        });
+        
+
+    </script>
+
+    <style>
+        div{
+            background-color: coral;
+            border: 1px solid black;
+            padding: 4px;
+            display: inline;
+            border-radius: 3px;
+        }
+
+        .delete {
+            color: coral;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 onclick="">Exercícios em JQuery</h1>
+
+    <div>item 1</div>
+    <div>item 2</div>
+    <div>item 3</div>
+    <div>item 4</div>
+
+    <br /><br /><br />
+
+    <input type="text" id="cidades" />
+    <button id="btn-cadastrar">Cadastrar</button>
+
+    <!--Listas-->
+    <ul id="todas-cidades">
+        <li>Curitiba <span class="delete">[X]</span></li>
+        <li>Pinhais <span class="delete">[X]</span></li>
+        <li>Colombo <span class="delete">[X]</span></li>
+        <li>Araucária <span class="delete">[X]</span></li>
+        <li>Almirante Tamandaré <span class="delete">[X]</span></li>
+    </ul>
+
+</body>
+</html>
